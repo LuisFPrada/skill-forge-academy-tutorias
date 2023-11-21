@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 import java.time.LocalDateTime;
 
-@Table(name = "usuarios")
+@Table(name = "sesiones_tutoria")
 @Entity
 @ToString
 

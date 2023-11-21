@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Table(name = "usuarios")
+@Table(name = "calificaciones")
 @Entity
 @ToString
 @EqualsAndHashCode
@@ -33,5 +33,5 @@ public class Calificacion {
 
         @Getter @Setter
         private String comentario;
-    }
+}
 

@@ -8,7 +8,7 @@ import lombok.ToString;
 import java.time.LocalDateTime;
 
 
-@Table(name = "comentarios")
+@Table(name = "notificaciones")
 @Entity
 @ToString
 
