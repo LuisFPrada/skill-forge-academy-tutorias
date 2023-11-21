@@ -3,15 +3,12 @@ package com.tutorias.skill.forge.academy.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.time.LocalDateTime;
 
 
 @Table(name = "notificaciones")
 @Entity
-@ToString
-
 public class Notificacion {
     @Id
     @Getter @Setter @Column (name = "id_notificacion")

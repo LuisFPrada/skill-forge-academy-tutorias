@@ -28,6 +28,6 @@ alert ('La contraseña que escribiste es diferente.');
 
   });
     alert('La cuenta fue creada con exito!')
-    window.location.href = 'login.html'
+   // window.location.href = 'login.html'
 
 }

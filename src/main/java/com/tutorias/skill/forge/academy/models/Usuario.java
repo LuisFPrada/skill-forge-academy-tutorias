@@ -32,7 +32,7 @@ public class Usuario {
     @Getter @Setter @Column(name = "password")
     private String password;
 
-    @Getter @Setter @Column(name = "tipousuario")
-    private String tipousuario;
+    @Getter @Setter @Column(name = "tipo_usuario")
+    private String tipo_usuario;
 
 }

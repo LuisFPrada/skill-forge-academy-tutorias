@@ -2,15 +2,11 @@ package com.tutorias.skill.forge.academy.models;
 
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Table(name = "calificaciones")
 @Entity
-@ToString
-@EqualsAndHashCode
 public class Calificacion {
 
         @Id

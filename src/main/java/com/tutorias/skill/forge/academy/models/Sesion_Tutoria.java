@@ -3,13 +3,10 @@ package com.tutorias.skill.forge.academy.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 import java.time.LocalDateTime;
 
 @Table(name = "sesiones_tutoria")
 @Entity
-@ToString
-
 public class Sesion_Tutoria {
 
         @Id
