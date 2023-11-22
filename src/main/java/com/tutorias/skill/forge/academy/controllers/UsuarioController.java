@@ -20,7 +20,7 @@ public class UsuarioController {
     @Autowired
     private JWTUtil jwtUtil;
 
-    @RequestMapping(value = "api/usuarios/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "api/usuarios", method = RequestMethod.GET)
     public List<Usuario> getUsuarios(@RequestHeader(value="Authorization") String token) {
         if (!validarToken(token)) { return null; }
 
@@ -33,14 +33,14 @@ public class UsuarioController {
     }
 
     @RequestMapping(value = "api/usuarios", method = RequestMethod.POST)
-    public void registrarUsuarios(@RequestBody Usuario usuario) {
+    public void registrarUsuario(@RequestBody Usuario usuario) {
 
         Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
         String hash = argon2.hash(1, 1024, 1, usuario.getPassword());
         usuario.setPassword(hash);
+
         usuarioDao.registrar(usuario);
     }
-
     @RequestMapping(value = "api/usuarios/{id}", method = RequestMethod.DELETE)
     public void eliminar(@RequestHeader(value="Authorization") String token,
                          @PathVariable Long id) {
