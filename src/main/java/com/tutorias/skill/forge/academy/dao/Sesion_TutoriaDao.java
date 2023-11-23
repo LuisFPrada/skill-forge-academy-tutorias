@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface Sesion_TutoriaDao {
     List<Sesion_Tutoria> getSesion();
+
+    void registrar(Sesion_Tutoria sesionTutoria);
 }

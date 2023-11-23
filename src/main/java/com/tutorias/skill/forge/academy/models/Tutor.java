@@ -9,18 +9,25 @@ import lombok.Setter;
 @Table(name = "perfiles_tutores")
 public class Tutor {
 
-    @Id
+
     @Getter @Setter
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Getter @Setter
-    private String areasEspecializacion;
-
-    // Relación con el Usuario
-    @OneToOne
-    @JoinColumn(name = "usuario_id")
-    @Getter @Setter
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "usuario_id", referencedColumnName = "id")
     private Usuario usuario;
 
+
+    @Getter @Setter
+    private String experienciaEducativa;
+
+
+    @Getter @Setter
+    private String areasEspecializacion;
+
+    @Getter @Setter
+    private double tarifaPorHora;
 }

@@ -24,9 +24,17 @@ public class Sesion_Tutoria {
         @Getter @Setter
         private Tutor tutor;
 
+        @JoinColumn(name = "nombre_tutoria")
+        @Getter @Setter
+        private String nombreTutoria;
+
+
         @Column(name = "fecha")
         @Getter @Setter
         private LocalDateTime fecha;
+
+        @Getter @Setter
+        private LocalDateTime fechaFin;
 
         @Getter @Setter @Column(name = "confirmada")
         private boolean confirmada;

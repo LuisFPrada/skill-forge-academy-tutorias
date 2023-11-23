@@ -17,5 +17,10 @@ public class Sesion_TutoriaDaoImp implements Sesion_TutoriaDao{
         String query = "FROM Sesion_Tutoria";
         return entityManager.createQuery(query).getResultList();
     }
+
+    @Override
+    public void registrar(Sesion_Tutoria sesionTutoria) {entityManager.merge(sesionTutoria);
+
+    }
 }
 
