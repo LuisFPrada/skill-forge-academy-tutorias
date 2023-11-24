@@ -19,7 +19,7 @@ public class UsuarioDaoImp implements UsuarioDao {
     @Override
     @Transactional
     public List<Usuario> getUsuarios() {
-        String query = "FROM Usuario";
+        String query = "FROM usuarios";
         return entityManager.createQuery(query).getResultList();
     }
 
@@ -36,7 +36,7 @@ public class UsuarioDaoImp implements UsuarioDao {
 
     @Override
     public Usuario obtenerUsuarioPorCredenciales(Usuario usuario) {
-        String query = "FROM Usuario WHERE email = :email";
+        String query = "FROM usuarios WHERE email = :email";
         List<Usuario> lista = entityManager.createQuery(query)
                 .setParameter("email", usuario.getEmail())
                 .getResultList();
