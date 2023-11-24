@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 
-async function registrarUsuario() {
+async function registrarTutoria() {
   let datos = {};
   datos.nombre = document.getElementById('txtNombre').value;
   datos.apellido = document.getElementById('txtApellido').value;

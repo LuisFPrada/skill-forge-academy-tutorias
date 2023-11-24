@@ -2,7 +2,7 @@ package com.tutorias.skill.forge.academy.controllers;
 
 import com.tutorias.skill.forge.academy.dao.Sesion_TutoriaDao;
 import com.tutorias.skill.forge.academy.models.Sesion_Tutoria;
-import com.tutorias.skill.forge.academy.models.Usuario;
+import com.tutorias.skill.forge.academy.models.Tutor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,4 +24,6 @@ public class Sesion_TutoriaController {
         sesionTutoriaDao.registrar(sesionTutoria);
     }
 
+
 }
+

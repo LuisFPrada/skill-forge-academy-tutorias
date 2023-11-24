@@ -14,7 +14,7 @@ public class Sesion_TutoriaDaoImp implements Sesion_TutoriaDao{
 
     @Override
     public List<Sesion_Tutoria> getSesion() {
-        String query = "FROM Sesion_Tutoria";
+        String query = "FROM sesiones_tutoria";
         return entityManager.createQuery(query).getResultList();
     }
 
