@@ -18,7 +18,7 @@ public class UsuarioController {
 
 //Listar Usuarios
     @RequestMapping(value = "api/usuarios", method = RequestMethod.GET)
-    public List<Usuario> getUsuarios(@PathVariable Long id) {
+    public List<Usuario> getUsuarios() {
         return usuarioDao.getUsuarios();
     }
 
