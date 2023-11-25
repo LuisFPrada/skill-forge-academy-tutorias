@@ -3,11 +3,11 @@ $(document).ready(function() {
 });
 
 
-async function registrarTutoria() {
+async function registrarTutorias() {
   let datos = {};
-  datos.nombre = document.getElementById('txtNombre').value;
-  datos.apellido = document.getElementById('txtApellido').value;
-  datos.email = document.getElementById('txtEmail').value;
+  datos.nombre = document.getElementById('txtNombreTutoria').value;
+  datos.apellido = document.getElementById('txtFechaTutoria').value;
+  datos.email = document.getElementById('txtHoraTutoria').value;
   datos.telefono = document.getElementById('txtNumerodeTelefóno').value;
   datos.password = document.getElementById('txtPassword').value;
 

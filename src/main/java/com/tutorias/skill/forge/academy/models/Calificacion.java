@@ -17,7 +17,7 @@ public class Calificacion {
         @ManyToOne
         @JoinColumn(name = "tutor_id")
         @Getter @Setter
-        private Tutor tutor;
+        private Perfiles_Tutores perfilesTutores;
 
         @ManyToOne
         @JoinColumn(name = "estudiante_id")

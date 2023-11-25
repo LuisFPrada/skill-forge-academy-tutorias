@@ -1,6 +1,6 @@
 package com.tutorias.skill.forge.academy.dao;
 
-import com.tutorias.skill.forge.academy.models.Tutor;
+import com.tutorias.skill.forge.academy.models.Perfiles_Tutores;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
@@ -13,12 +13,12 @@ public class TutorDaoImp implements TutorDao {
 
 
     @Override
-    public void registrar(Tutor tutor) {
+    public void registrar(Perfiles_Tutores perfilesTutores) {
 
     }
 
     @Override
-    public List<Tutor> buscarTutores(String areasEspecializacion) {
+    public List<Perfiles_Tutores> buscarTutores(String areasEspecializacion) {
         String query = "FROM perfiles_tutores";
         return entityManager.createQuery(query).getResultList();
     }

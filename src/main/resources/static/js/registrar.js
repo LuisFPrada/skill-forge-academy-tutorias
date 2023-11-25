@@ -18,7 +18,7 @@ async function registrarUsuario() {
     return;
   }
 
-  const request = await fetch('api/sesion_tutorias', {
+  const request = await fetch('api/usuarios', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

@@ -3,7 +3,6 @@ package com.tutorias.skill.forge.academy.controllers;
 
 import com.tutorias.skill.forge.academy.dao.UsuarioDao;
 import com.tutorias.skill.forge.academy.models.Usuario;
-import com.tutorias.skill.forge.academy.utils.JWTUtil;
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,21 +16,12 @@ public class UsuarioController {
     @Autowired
     private UsuarioDao usuarioDao;
 
-    @Autowired
-    private JWTUtil jwtUtil;
-
-    //Listar Usuarios
+//Listar Usuarios
     @RequestMapping(value = "api/usuarios", method = RequestMethod.GET)
-    public List<Usuario> getUsuarios(@RequestHeader(value="Authorization") String token) {
-        if (!validarToken(token)) { return null; }
-
+    public List<Usuario> getUsuarios(@PathVariable Long id) {
         return usuarioDao.getUsuarios();
     }
 
-    private boolean validarToken(String token) {
-        String usuarioId = jwtUtil.getKey(token);
-        return usuarioId != null;
-    }
 //Registrar Usuarios
     @RequestMapping(value = "api/usuarios", method = RequestMethod.POST)
     public void registrarUsuario(@RequestBody Usuario usuario) {
@@ -45,9 +35,7 @@ public class UsuarioController {
     }
 //Eliminar Usuarios
     @RequestMapping(value = "api/usuarios/{id}", method = RequestMethod.DELETE)
-    public void eliminar(@RequestHeader(value="Authorization") String token,
-                         @PathVariable Long id) {
-        if (!validarToken(token)) { return; }
+    public void eliminar(@PathVariable Long id) {
         usuarioDao.eliminar(id);
     }
 

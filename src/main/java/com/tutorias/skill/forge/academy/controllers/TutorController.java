@@ -1,7 +1,7 @@
 package com.tutorias.skill.forge.academy.controllers;
 
 import com.tutorias.skill.forge.academy.dao.TutorDao;
-import com.tutorias.skill.forge.academy.models.Tutor;
+import com.tutorias.skill.forge.academy.models.Perfiles_Tutores;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,14 +14,14 @@ public class TutorController {
 
 //Registrar Tutores
     @RequestMapping(value = "api/tutores", method = RequestMethod.POST)
-    public void registrarTutor(@RequestBody Tutor tutor) {
+    public void registrarTutor(@RequestBody Perfiles_Tutores perfilesTutores) {
         // registro de tutores
-        tutorDao.registrar(tutor);
+        tutorDao.registrar(perfilesTutores);
 
     }
 //Buscar tutores por especialización
     @GetMapping(value = "api/tutores")
-    public List<Tutor> buscarTutores(@RequestParam String areas_especializacion) {
+    public List<Perfiles_Tutores> buscarTutores(@RequestParam String areas_especializacion) {
         return tutorDao.buscarTutores(areas_especializacion);
     }
 

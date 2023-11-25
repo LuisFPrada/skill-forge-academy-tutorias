@@ -1,11 +1,11 @@
 package com.tutorias.skill.forge.academy.dao;
 
-import com.tutorias.skill.forge.academy.models.Tutor;
+import com.tutorias.skill.forge.academy.models.Perfiles_Tutores;
 
 import java.util.List;
 
 public interface TutorDao {
-    void registrar(Tutor tutor);
+    void registrar(Perfiles_Tutores perfilesTutores);
 
-    List<Tutor> buscarTutores(String areasEspecializacion);
+    List<Perfiles_Tutores> buscarTutores(String areasEspecializacion);
 }

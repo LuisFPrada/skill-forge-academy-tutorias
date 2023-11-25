@@ -22,7 +22,7 @@ public class Sesion_Tutoria {
         @ManyToOne
         @JoinColumn(name = "tutor_id")
         @Getter @Setter
-        private Tutor tutor;
+        private Perfiles_Tutores perfilesTutores;
 
         @JoinColumn(name = "nombre_tutoria")
         @Getter @Setter
