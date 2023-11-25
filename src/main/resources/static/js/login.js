@@ -22,7 +22,7 @@ datos.password = document.getElementById('txtPassword').value;
 
 
   const respuesta = await request.text();
-  if (respuesta != 'FAIL') {
+  if (respuesta == 'OK') {
   window.location.href = 'usuarios.html'
   } else {
   alert("¡ERROR!, correo o contraseñas incorrectas!. Por favor intente de nuevo");

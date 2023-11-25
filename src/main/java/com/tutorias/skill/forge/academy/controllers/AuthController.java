@@ -21,11 +21,10 @@ public class AuthController {
     @RequestMapping(value = "api/login", method = RequestMethod.POST)
     public String login(@RequestBody Usuario usuario) {
 
-        Usuario usuarioLogueado = usuarioDao.obtenerUsuarioPorCredenciales(usuario);
-        if (usuarioLogueado != null) {
+        if (usuarioDao.obtenerUsuarioPorCredenciales(usuario)) {
 
-            return "OK";
+                return "OK";
+            }
+            return "FAIL";
         }
-        return "FAIL";
     }
-}

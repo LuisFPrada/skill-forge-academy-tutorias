@@ -13,7 +13,7 @@ public class Sesion_TutoriaController {
     Sesion_TutoriaDao sesionTutoriaDao;
 
     @RequestMapping(value = "api/sesion_tutorias", method = RequestMethod.GET)
-    public List<Sesion_Tutoria> getSesion(@PathVariable Long id) {
+    public List<Sesion_Tutoria> getSesion() {
         return sesionTutoriaDao.getSesion();
     }
 
