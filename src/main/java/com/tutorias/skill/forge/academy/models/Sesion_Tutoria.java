@@ -3,7 +3,9 @@ package com.tutorias.skill.forge.academy.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import java.time.LocalDateTime;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Table(name = "sesiones_tutoria")
 @Entity
@@ -31,12 +33,13 @@ public class Sesion_Tutoria {
 
         @Column(name = "fecha")
         @Getter @Setter
-        private LocalDateTime fecha;
+        private LocalDate fecha;
+
+        @Column(name = "hora")
+        @Getter @Setter
+        private LocalTime hora;
 
         @Getter @Setter
-        private LocalDateTime fechaFin;
-
-        @Getter @Setter @Column(name = "confirmada")
         private boolean confirmada;
 
 

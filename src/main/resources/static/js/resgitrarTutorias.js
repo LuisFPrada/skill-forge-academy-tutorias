@@ -6,17 +6,10 @@ $(document).ready(function() {
 async function registrarTutorias() {
   let datos = {};
   datos.nombre = document.getElementById('txtNombreTutoria').value;
-  datos.apellido = document.getElementById('txtFechaTutoria').value;
-  datos.email = document.getElementById('txtHoraTutoria').value;
-  datos.telefono = document.getElementById('txtNumerodeTelefóno').value;
-  datos.password = document.getElementById('txtPassword').value;
+  datos.fechatutoria = document.getElementById('txtFechaTutoria').value;
+  datos.horatutoria = document.getElementById('txtHoraTutoria').value;
 
-  let repetirPassword = document.getElementById('txtRepetirPassword').value;
 
-  if (repetirPassword != datos.password) {
-    alert('La contraseña que escribiste es diferente.');
-    return;
-  }
 
   const request = await fetch('api/sesion_tutorias', {
     method: 'POST',

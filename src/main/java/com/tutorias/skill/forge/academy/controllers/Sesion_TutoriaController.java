@@ -16,7 +16,7 @@ public class Sesion_TutoriaController {
     public List<Sesion_Tutoria> getSesion() {
         return sesionTutoriaDao.getSesion();
     }
-
+    @CrossOrigin
     @RequestMapping(value = "api/sesion_tutorias", method = RequestMethod.POST)
     public void registrarSesionTutoria(@RequestBody Sesion_Tutoria sesionTutoria) {
 

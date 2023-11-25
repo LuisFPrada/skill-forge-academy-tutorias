@@ -1,18 +1,7 @@
 $(document).ready(function() {
-    cargarUsuarios();
-  $('#usuarios').DataTable();
+//on ready
 });
 
-async function cargarUsuarios(){
-
-  const request = await fetch('api/tutores', {
-    method: 'GET',
-    headers: getHeaders()
-  });
-  const usuarios = await request.json();
-
-  let usuario = usuario.id
-}
 
 async function registrarTutores() {
   let datos = {};
@@ -31,7 +20,7 @@ async function registrarTutores() {
     body: JSON.stringify(datos)
   });
   alert("La cuenta fue actualizada con exito!");
-  window.location.href = 'index.html'
+  window.location.href = 'perfilTutor.html'
 
 }
 
