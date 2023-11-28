@@ -1,24 +1,27 @@
 package com.tutorias.skill.forge.academy.controllers;
 
 import com.tutorias.skill.forge.academy.dao.Sesion_TutoriaDao;
-import com.tutorias.skill.forge.academy.models.Sesion_Tutoria;
+import com.tutorias.skill.forge.academy.models.Sesion_Tutorias;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+@RestController
 public class Sesion_TutoriaController {
 
     @Autowired
     Sesion_TutoriaDao sesionTutoriaDao;
 
     @RequestMapping(value = "api/sesion_tutorias", method = RequestMethod.GET)
-    public List<Sesion_Tutoria> getSesion() {
+    public List<Sesion_Tutorias> getSesion() {
         return sesionTutoriaDao.getSesion();
     }
-    @CrossOrigin
+
+
     @RequestMapping(value = "api/sesion_tutorias", method = RequestMethod.POST)
-    public void registrarSesionTutoria(@RequestBody Sesion_Tutoria sesionTutoria) {
+    public void registrarSesionTutoria(@RequestBody Sesion_Tutorias sesionTutoria) {
 
         sesionTutoriaDao.registrar(sesionTutoria);
     }

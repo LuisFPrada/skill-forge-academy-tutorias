@@ -1,5 +1,6 @@
 package com.tutorias.skill.forge.academy.dao;
 
+import com.tutorias.skill.forge.academy.models.Perfiles_Tutores;
 import com.tutorias.skill.forge.academy.models.Usuario;
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
@@ -49,6 +50,16 @@ public class UsuarioDaoImp implements UsuarioDao {
 
         Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
         return argon2.verify(passwordHashed, usuario.getPassword());
+    }
+
+    @Override
+    public Usuario obtenerUsuarioPorId(Long estudianteId) {
+        return null;
+    }
+
+    @Override
+    public Perfiles_Tutores obtenerTutorPorId(Long tutorId) {
+        return null;
     }
 
 }
