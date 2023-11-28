@@ -1,7 +1,8 @@
-package com.tutorias.skill.forge.academy.dao;
+package com.tutorias.skill.forge.academy.dao.daoImp;
 
+import com.tutorias.skill.forge.academy.dao.CalificacionDao;
 import com.tutorias.skill.forge.academy.models.Calificacion;
-import com.tutorias.skill.forge.academy.models.Perfiles_Tutores;
+import com.tutorias.skill.forge.academy.models.PerfilesTutores;
 import com.tutorias.skill.forge.academy.models.Usuario;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Transactional
-public class CalificacionDaoImp implements CalificacionDao{
+public class CalificacionDaoImp implements CalificacionDao {
 
     @PersistenceContext
     EntityManager entityManager;
@@ -22,7 +23,7 @@ public class CalificacionDaoImp implements CalificacionDao{
     }
 
     @Override
-    public Perfiles_Tutores obtenerTutorPorId(Long tutorId) {
+    public PerfilesTutores obtenerTutorPorId(Long tutorId) {
         return null;
     }
 

@@ -9,7 +9,7 @@ import java.time.LocalTime;
 
 @Table(name = "sesiones_tutoria")
 @Entity
-public class Sesion_Tutorias {
+public class SesionTutorias {
 
         @Id
         @Getter @Setter
@@ -24,7 +24,7 @@ public class Sesion_Tutorias {
         @ManyToOne
         @JoinColumn(name = "tutor_id")
         @Getter @Setter
-        private Perfiles_Tutores perfilesTutores;
+        private PerfilesTutores perfilesTutores;
 
         @JoinColumn(name = "nombre_tutoria")
         @Getter @Setter

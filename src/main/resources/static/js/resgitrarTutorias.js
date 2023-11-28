@@ -16,7 +16,7 @@ async function registrarTutorias() {
 
     console.log(datos);
 
-const request = await fetch('api/sesion_tutorias', {
+const request = await fetch('api/tutorias', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',

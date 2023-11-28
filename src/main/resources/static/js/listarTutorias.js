@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 
 async function cargarTutorias() {
-  const request = await fetch('api/sesion_tutorias', {
+  const request = await fetch('api/tutorias', {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
