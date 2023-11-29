@@ -1,7 +1,7 @@
 package com.tutorias.skill.forge.academy.controllers;
 
 import com.tutorias.skill.forge.academy.dao.SesionTutoriaDao;
-import com.tutorias.skill.forge.academy.models.SesionTutorias;
+import com.tutorias.skill.forge.academy.models.SesionTutoria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,13 +15,13 @@ public class SesionTutoriaController {
     SesionTutoriaDao sesionTutoriaDao;
 
     @RequestMapping(value = "api/tutorias", method = RequestMethod.GET)
-    public List<SesionTutorias> getSesion() {
+    public List<SesionTutoria> getSesion() {
         return sesionTutoriaDao.getSesion();
     }
 
 
     @RequestMapping(value = "api/tutorias", method = RequestMethod.POST)
-    public void registrarSesionTutoria(@RequestBody SesionTutorias sesionTutoria) {
+    public void registrarSesionTutoria(@RequestBody SesionTutoria sesionTutoria) {
 
         sesionTutoriaDao.registrar(sesionTutoria);
     }

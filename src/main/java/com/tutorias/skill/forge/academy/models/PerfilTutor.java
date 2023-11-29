@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "perfiles_tutores")
-public class PerfilesTutores {
+public class PerfilTutor {
 
 
     @Getter @Setter

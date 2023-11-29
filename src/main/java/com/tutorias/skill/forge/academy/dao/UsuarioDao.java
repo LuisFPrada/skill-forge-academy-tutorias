@@ -1,6 +1,6 @@
 package com.tutorias.skill.forge.academy.dao;
 
-import com.tutorias.skill.forge.academy.models.PerfilesTutores;
+import com.tutorias.skill.forge.academy.models.PerfilTutor;
 import com.tutorias.skill.forge.academy.models.Usuario;
 
 import java.util.List;
@@ -17,5 +17,5 @@ public interface UsuarioDao {
 
     Usuario obtenerUsuarioPorId(Long estudianteId);
 
-    PerfilesTutores obtenerTutorPorId(Long tutorId);
+    PerfilTutor obtenerTutorPorId(Long tutorId);
 }

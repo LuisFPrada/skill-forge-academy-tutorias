@@ -2,6 +2,7 @@ package com.tutorias.skill.forge.academy.controllers;
 
 import com.tutorias.skill.forge.academy.dao.UsuarioDao;
 import com.tutorias.skill.forge.academy.models.Usuario;
+import com.tutorias.skill.forge.academy.utils.JWTUtil;
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AuthController {
+
+    @Autowired
+    private JWTUtil jwtUtil;
 
     @Autowired
     private UsuarioDao usuarioDao;

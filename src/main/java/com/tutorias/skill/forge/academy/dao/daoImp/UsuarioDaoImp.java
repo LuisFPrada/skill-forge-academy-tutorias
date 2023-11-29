@@ -1,7 +1,7 @@
 package com.tutorias.skill.forge.academy.dao.daoImp;
 
 import com.tutorias.skill.forge.academy.dao.UsuarioDao;
-import com.tutorias.skill.forge.academy.models.PerfilesTutores;
+import com.tutorias.skill.forge.academy.models.PerfilTutor;
 import com.tutorias.skill.forge.academy.models.Usuario;
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
@@ -59,7 +59,7 @@ public class UsuarioDaoImp implements UsuarioDao {
     }
 
     @Override
-    public PerfilesTutores obtenerTutorPorId(Long tutorId) {
+    public PerfilTutor obtenerTutorPorId(Long tutorId) {
         return null;
     }
 

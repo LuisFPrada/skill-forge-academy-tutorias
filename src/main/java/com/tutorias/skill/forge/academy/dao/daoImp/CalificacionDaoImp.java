@@ -2,7 +2,7 @@ package com.tutorias.skill.forge.academy.dao.daoImp;
 
 import com.tutorias.skill.forge.academy.dao.CalificacionDao;
 import com.tutorias.skill.forge.academy.models.Calificacion;
-import com.tutorias.skill.forge.academy.models.PerfilesTutores;
+import com.tutorias.skill.forge.academy.models.PerfilTutor;
 import com.tutorias.skill.forge.academy.models.Usuario;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -23,7 +23,7 @@ public class CalificacionDaoImp implements CalificacionDao {
     }
 
     @Override
-    public PerfilesTutores obtenerTutorPorId(Long tutorId) {
+    public PerfilTutor obtenerTutorPorId(Long tutorId) {
         return null;
     }
 

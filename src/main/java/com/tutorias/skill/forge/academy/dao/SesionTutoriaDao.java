@@ -1,10 +1,10 @@
 package com.tutorias.skill.forge.academy.dao;
 
-import com.tutorias.skill.forge.academy.models.SesionTutorias;
+import com.tutorias.skill.forge.academy.models.SesionTutoria;
 
 import java.util.List;
 
 public interface SesionTutoriaDao {
-    List<SesionTutorias> getSesion();
-    void registrar(SesionTutorias sesionTutoria);
+    List<SesionTutoria> getSesion();
+    void registrar(SesionTutoria sesionTutoria);
 }

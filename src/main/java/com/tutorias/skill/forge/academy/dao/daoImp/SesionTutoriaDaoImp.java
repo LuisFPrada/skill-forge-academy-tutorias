@@ -1,7 +1,7 @@
 package com.tutorias.skill.forge.academy.dao.daoImp;
 
 import com.tutorias.skill.forge.academy.dao.SesionTutoriaDao;
-import com.tutorias.skill.forge.academy.models.SesionTutorias;
+import com.tutorias.skill.forge.academy.models.SesionTutoria;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
@@ -18,13 +18,13 @@ public class SesionTutoriaDaoImp implements SesionTutoriaDao {
 
 
     @Override
-    public List<SesionTutorias> getSesion() {
+    public List<SesionTutoria> getSesion() {
         String query = "FROM sesiones_tutoria";
         return entityManager.createQuery(query).getResultList();
     }
 
     @Override
-    public void registrar(SesionTutorias sesionTutoria) {
+    public void registrar(SesionTutoria sesionTutoria) {
         entityManager.merge(sesionTutoria);
 
     }

@@ -13,15 +13,18 @@ async function cargarTutorias() {
       'Content-Type': 'application/json',
     },
   });
-  const tutorias = await request.json();
+  const SesionTutoria = await request.json();
 
 
   let listadoHtml = '';
-  for (let tutoria of tutorias) {
-    let botonEliminar = '<a href="#" onclick="eliminarTutoria(' + usuario.id + ')" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>';
+  for (let tutoria of SesionTutoria) {
+    let botonEliminar = '<a href="#" onclick="eliminarTutoria(' + SesionTutoria.id +
+     ')" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>';
 
-    let tutoriaHtml = '<tr><td>'+tutoria.id+'</td><td>' + tutoria.nombre_tutoria + ' ' + tutoria.tutor_id + '</td><td>'
-                    + tutoria.fecha+'</td><td>'+ tutoria.hora
+    let tutoriaHtml = '<tr><td>'+SesionTutoria.id+'</td><td>'
+                    + SesionTutoria.nombre_tutoria + ' '
+                    + SesionTutoria.tutor_id + '</td><td>'
+                    + SesionTutoria.fecha+'</td><td>'+ SesionTutoria.hora
                     + '</td><td>' + botonEliminar + '</td></tr>';
     listadoHtml += tutoriaHtml;
   }
