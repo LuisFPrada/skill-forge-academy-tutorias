@@ -22,8 +22,12 @@ datos.password = document.getElementById('txtPassword').value;
 
 
   const respuesta = await request.text();
-  if (respuesta == 'OK') {
-  window.location.href = 'usuarios.html'
+  if (respuesta != 'FAIL') {
+
+  localStorage.token = respuesta;
+  localStorage.email = datos.email;
+  //window.location.href = 'index.html'
+
   } else {
   alert("¡ERROR!, correo o contraseñas incorrectas!. Por favor intente de nuevo");
   }
